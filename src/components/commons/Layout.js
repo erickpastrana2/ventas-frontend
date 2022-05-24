@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Menu from './Menu';
 
-const Layout = () => {
+const Layout = (props) => {
     return (  
         <div>
             <Header/>
@@ -13,7 +13,7 @@ const Layout = () => {
                         <Menu/>
                     </div>
                     <div className="column">
-                        <p>Este es el contenido</p>
+                        {props.children}
                     </div>
                 </div>
             </div>
