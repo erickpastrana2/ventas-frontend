@@ -16,12 +16,22 @@ const Menu = () => {
                 </Link>
             </div>
             <div className="panel-block">
-                <Link to="/clientes" className='button is-fullwidth'>
+                <Link to="/articulos" className='button is-fullwidth'>
                     <span className='icon'>
                         <i className='fas fa-users'></i>
                     </span>
                     <span>
-                        Clientes   
+                        Articulos   
+                    </span>
+                </Link>
+            </div>
+            <div className="panel-block">
+                <Link to="/modelos" className='button is-fullwidth'>
+                    <span className='icon'>
+                        <i className='fas fa-users'></i>
+                    </span>
+                    <span>
+                        Modelos   
                     </span>
                 </Link>
             </div>

@@ -3,17 +3,26 @@ import 'bulma/css/bulma.css';
 import '@fortawesome/fontawesome-free/js/all';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Clientes from "./pages/Clientes";
+import Articulos from "./pages/Articulos";
+import Modelos from "./pages/Modelos";
+import Axios from "axios";
+
+
+Axios.interceptors.request.use(function(config){
+  config.url=`${process.env.REACT_APP_API_BASE_URL}${config.url}`;
+  return config;
+})
+
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route exact path="/clientes" element={<Clientes/>} />
-      </Routes>
-        
-      
-    </Router>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home/>} />
+          <Route exact path="/articulos" element={<Articulos/>} />
+          <Route exact path="/modelos" element={<Modelos/>} />
+        </Routes>
+      </Router>
+    
   );
 }
 
