@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Articulos from "./pages/Articulos";
 import Modelos from "./pages/Modelos";
 import Axios from "axios";
+import Test from "./pages/Test";
 
 
 Axios.interceptors.request.use(function(config){
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/" element={<Home/>} />
           <Route exact path="/articulos" element={<Articulos/>} />
           <Route exact path="/modelos" element={<Modelos/>} />
+          <Route exact path="/test" element={<Test/>} />
         </Routes>
       </Router>
     

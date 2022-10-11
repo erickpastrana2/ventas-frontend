@@ -35,6 +35,16 @@ const Menu = () => {
                     </span>
                 </Link>
             </div>
+            <div className="panel-block">
+                <Link to="/test" className='button is-fullwidth'>
+                    <span className='icon'>
+                        <i className='fas fa-users'></i>
+                    </span>
+                    <span>
+                        Test   
+                    </span>
+                </Link>
+            </div>
         </nav>
     );
 }

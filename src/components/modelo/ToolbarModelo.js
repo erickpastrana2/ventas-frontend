@@ -15,7 +15,7 @@ const ToolbarModelo = () => {
 
     return ( 
         <div className="container">
-            <button className="button is-small is-primary"
+            <button className="button is-normal is-primary"
                 onClick={ () => abrirModalCrear() }
             >
                 <span className="icon is-small">

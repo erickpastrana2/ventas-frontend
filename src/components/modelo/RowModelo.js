@@ -8,15 +8,15 @@ const RowModelo = ({modelo}) => {
     const { obtenerModelo, eliminarModelo, setIsDisabled } = useContext(ModeloContext);
 
     const abrirModalModificar = () => {
+        console.log(modelo);
         obtenerModelo(modelo);
         setModalTitle('Modificar modelo');
         setShowModal(true);
         setIsDisabled(true);
     }
 
-    
-
     return ( 
+        
         <tr>
             <td>
                 <button className="button is-small is-info mr-1" 
@@ -40,6 +40,7 @@ const RowModelo = ({modelo}) => {
             <td>{modelo.idmodelo}</td>
             <td>{modelo.descripcion}</td>
         </tr>
+        
      );
 }
  

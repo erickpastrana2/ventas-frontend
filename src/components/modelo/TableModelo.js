@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ModeloContext } from '../../context/modeloContext';
 import RowModelo from './RowModelo';
+//import ReactDatatable from '@yun548/bulma-react-datatable';
+import { ModalContex } from '../../context/modalContext';
 
-const TableModelo = () => {
+function TableModelo() {
 
     const { modelosList, obtenerModelos } = useContext(ModeloContext);
 
@@ -10,9 +12,12 @@ const TableModelo = () => {
         obtenerModelos();
     }, []);
 
-    if(modelosList.length === 0) return <center>No existen modelos</center>
-    
-    return ( <table className="table">
+    if (modelosList.length === 0)
+        return <center>No existen modelos</center>;
+
+    return (
+        
+    <table className="table">
         <thead>
             <tr>
                 <th>Acciones</th>
@@ -21,13 +26,13 @@ const TableModelo = () => {
             </tr>
         </thead>
         <tbody>
-            {
-                modelosList.map(modelo => (
-                    <RowModelo modelo={modelo} key={modelo.idmodelo} />
-                ))
-            }
+            {modelosList.map(modelo => (
+                <RowModelo modelo={modelo} key={modelo.idmodelo} />
+            ))}
         </tbody>
-    </table> );
+    </table>
+    
+    );
 }
  
 export default TableModelo;
